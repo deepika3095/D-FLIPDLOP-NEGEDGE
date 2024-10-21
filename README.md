@@ -8,8 +8,7 @@ To implement  D flipflop using verilog and validating their functionality using 
 
 Quartus prime
 
-**THEORY**
-
+**THOERY**
 **D Flip-Flop**
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
@@ -26,19 +25,25 @@ Therefore, D flip-flop always Hold the information, which is available on data i
 
 Next state of D flip-flop is always equal to data input, D for every positive transition of the clock signal. Hence, D flip-flops can be used in registers, shift registers and some of the counters.
 
-**Procedure**
-
-/* write all the steps invloved */
-
 **PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
-
+```
+DEEPIKA R
+212223230038
+module EXP8(D,Clock,reset,Q);
+input D,reset,Clock;
+output reg Q;
+always @ (negedge Clock)
+if(!reset)
+Q <= 0;
+else
+Q <= D;
+endmodule
+```
 **RTL LOGIC FOR FLIPFLOPS**
-
+![image](https://github.com/user-attachments/assets/3c3a2e3a-5552-4210-b035-d0db45d8ad32)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-
+![image](https://github.com/user-attachments/assets/1e68b509-859c-43cb-91d4-7e58921cce29)
 
 **RESULTS**
+Program runned successfully with no errors
